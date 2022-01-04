@@ -36,7 +36,7 @@ Este proyecto se ejecuta por el puerto 8080.
 4.  Después de que se terminé de construir nuestro proyecto se generará automáticamente un **.jar**. (Este .jar podremos encontrarlo en la ruta del proyecto en la carpeta ***/target***)
 5. Para ejecutar el .jar, se realiza mediante el comando : 
 	**java -jar transporte-0.0.1.jar****
-	**NOTA**: De igual forma se deja en la ruta ***src/main/resources*** el jar generado para únicamente ejecutar el paso 5.
+**NOTA**: De igual forma se deja en la ruta ***src/main/resources*** el jar generado para únicamente ejecutar el paso 5.
 	
 ### Ejecución por IDE
 
