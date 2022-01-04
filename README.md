@@ -52,6 +52,59 @@ Se comparte una colección en postman con ejemplos de consumo de los servicios p
 
 ![ModeloER](https://github.com/roxandreajc110/file/blob/main/ModeloER.PNG?raw=true)
 
+## DDL
+
+```
+/* 
+ DROP TABLE persona;
+ DROP TABLE vehiculo;
+ DROP TABLE vehiculo_conductor;
+ * */
+CREATE TABLE persona (
+   id_persona integer, 
+   tipo_identificacion varchar(10) not null,
+   identificacion varchar(20) not null,
+   nombre varchar(20) not null,
+   direccion varchar(20),
+   telefono varchar(10),
+   representante_legal_id integer,
+   empresa_contratista_id integer,
+   primary key (id_persona),
+   foreign key (representante_legal_id) references persona(id_persona),
+   foreign key (empresa_contratista_id) references persona(id_persona)
+);
+
+CREATE TABLE vehiculo (
+   id_vehiculo integer, 
+   persona_juridica_id integer not null,
+   placa varchar(6) not null,
+   motor varchar(15) not null,
+   chasis varchar(15),
+   modelo varchar(20) not null, 
+   fecha_matricula date not null,
+   pasajeros_sentados integer not null,
+   pasajeros_de_pie integer not null,
+   peso_seco decimal(5,2),
+   peso_bruto decimal(5,2),
+   cantidad_puertas integer not null,
+   marca varchar(15) not null,
+   linea varchar(15),
+   primary key (id_vehiculo),
+   foreign key (persona_juridica_id) references persona(id_persona)
+);
+
+CREATE TABLE vehiculo_conductor (
+   vehiculo_id integer not null, 
+   conductor_id integer not null,
+   fecha_asignacion date not null,
+   primary key (vehiculo_id,conductor_id ),
+   foreign key (vehiculo_id) references vehiculo(id_vehiculo),
+   foreign key (conductor_id) references persona(id_persona)
+);
+```
+## DDL
+
+
 ## Autor
 Roxana A. Jaramillo Cobos<br>
 [www.linkedin.com/in/roxanajc ](www.linkedin.com/in/roxanajc)
