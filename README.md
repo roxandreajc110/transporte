@@ -48,6 +48,9 @@ Este proyecto se ejecuta por el puerto 8080.
 
 Se comparte una colección en postman con ejemplos de consumo de los servicios principales, esto se encuentran en la ruta ***src/main/resources/Transporte.postman_collection***
 
+## Modelo Entidad Relación
+
+![ModeloER](https://github.com/roxandreajc110/file/blob/main/ModeloER.PNG?raw=true)
 
 ## Autor
 Roxana A. Jaramillo Cobos<br>
