@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "c6b10bb1-bbdf-4ce7-b3a4-a8941b5063c4",
+		"name": "Transporte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar empresas transportadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/empresaTransportadora/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresaTransportadora",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar representantes legales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/persona/representanteLegal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona",
+						"representanteLegal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear empresa trasnportadora",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"tipoIdentificacion\": \"NIT\",\r\n        \"identificacion\": \"0543454545\",\r\n        \"nombre\": \"ALIADOS SAS\",\r\n        \"direccion\": \"Av 68 # 43\",\r\n        \"telefono\": \"254522\",\r\n        \"representanteLegal\": {\r\n            \"id\":1,\r\n            \"tipoIdentificacion\": \"CC\",\r\n            \"identificacion\": \"1018345632\",\r\n            \"nombre\": \"Dario Murillo\",\r\n            \"direccion\": \"Cr 100 # 15\",\r\n            \"telefono\": \"4313878\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/empresaTransportadora/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresaTransportadora",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
